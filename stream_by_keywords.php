@@ -33,9 +33,9 @@ function progress($curl, $str)
 
 			$profile = 0;
 			$twitter_account = getTwitterAccount($obj->{'text'});
-			if ($twitter_account == "iespaids") $profile = 1;
-			if ($twitter_account == "credit") $profile = 2; 
-			if ($twitter_account == "printeri") $profile = 3; 
+			if ($twitter_account == "darbs") $profile = 1;
+			if ($twitter_account == "skola") $profile = 2; 
+			if ($twitter_account == "studijas") $profile = 3; 
 
 	 		$qFriends="SELECT id FROM friends WHERE TwitterUserId = ". $obj->{'user'}->{'id'} ." AND ProfilId = $profile";
 			$rFriends=mysql_query($qFriends);
